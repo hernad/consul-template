@@ -1,4 +1,4 @@
-module github.com/hashicorp/consul-template
+module github.com/hernad/consul-template
 
 go 1.19
 

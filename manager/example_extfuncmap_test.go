@@ -11,8 +11,8 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/hashicorp/consul-template/config"
-	"github.com/hashicorp/consul-template/manager"
+	"github.com/hernad/consul-template/config"
+	"github.com/hernad/consul-template/manager"
 )
 
 // ExampleCustomFuncMap demonstrates a minimum [consul-template/manager]

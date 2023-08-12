@@ -13,8 +13,8 @@ import (
 	"text/template"
 
 	"github.com/Masterminds/sprig/v3"
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
+	"github.com/hernad/consul-template/config"
+	dep "github.com/hernad/consul-template/dependency"
 	"github.com/pkg/errors"
 	"golang.org/x/exp/maps"
 )

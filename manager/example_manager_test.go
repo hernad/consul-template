@@ -10,8 +10,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/hashicorp/consul-template/config"
-	"github.com/hashicorp/consul-template/manager"
+	"github.com/hernad/consul-template/config"
+	"github.com/hernad/consul-template/manager"
 )
 
 // This example demonstrates a minimum configuration to create, configure, and

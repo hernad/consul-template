@@ -2,131 +2,131 @@
 
 IMPROVEMENTS:
 
-* Added `ExtFuncMap` to allow external functions to be passed to the template. This gives users ability to add functions to the library and selective opaque existing ones. [1708](https://github.com/hashicorp/consul-template/pull/1708)
-* Vault: add new configuration option `vault-client-user-agent`, when set consul-template will use the set `User-Agent` when making requests to vault. This change is being made as part of a broader effort for Vault Agent to send its version as part of a User-Agent string in requests to Vault. Agent will then consume the latest version of consul-template, then use this new config to set the correct `User-Agent`. [GH-1725](https://github.com/hashicorp/consul-template/pull/1725)
-* Upgrade golang.org/x/net from 0.4.0 to 0.7.0. [GH-1711](https://github.com/hashicorp/consul-template/pull/1711)
-* Upgrade Sprig from v2 to v3. [GH-1699](https://github.com/hashicorp/consul-template/pull/1699/files)
-* Upgrage github.com/stretchr/testify from 1.8.1 to 1.8.2 [1726](https://github.com/hashicorp/consul-template/pull/1726)
-* Add copyright headers to file for compliance. [GH-1721](https://github.com/hashicorp/consul-template/pull/1721)
-* Improve use of inclusive language [GH-1731](https://github.com/hashicorp/consul-template/pull/1731)
+* Added `ExtFuncMap` to allow external functions to be passed to the template. This gives users ability to add functions to the library and selective opaque existing ones. [1708](https://github.com/hernad/consul-template/pull/1708)
+* Vault: add new configuration option `vault-client-user-agent`, when set consul-template will use the set `User-Agent` when making requests to vault. This change is being made as part of a broader effort for Vault Agent to send its version as part of a User-Agent string in requests to Vault. Agent will then consume the latest version of consul-template, then use this new config to set the correct `User-Agent`. [GH-1725](https://github.com/hernad/consul-template/pull/1725)
+* Upgrade golang.org/x/net from 0.4.0 to 0.7.0. [GH-1711](https://github.com/hernad/consul-template/pull/1711)
+* Upgrade Sprig from v2 to v3. [GH-1699](https://github.com/hernad/consul-template/pull/1699/files)
+* Upgrage github.com/stretchr/testify from 1.8.1 to 1.8.2 [1726](https://github.com/hernad/consul-template/pull/1726)
+* Add copyright headers to file for compliance. [GH-1721](https://github.com/hernad/consul-template/pull/1721)
+* Improve use of inclusive language [GH-1731](https://github.com/hernad/consul-template/pull/1731)
 
 ## v0.30.0 (Jan 09, 2023)
 
 IMPROVEMENTS:
-* option to exit with an error upon failure to look up data (instead of blocking and waiting for it). [[GH-1695](https://github.com/hashicorp/consul-template/pull/1695), [GH-1637](https://github.com/hashicorp/consul-template/issues/1637)]
-* tweak defaults for performance improvements [[GH-1697](https://github.com/hashicorp/consul-template/pull/1697), [GH-1603](https://github.com/hashicorp/consul-template/issues/1603)]
+* option to exit with an error upon failure to look up data (instead of blocking and waiting for it). [[GH-1695](https://github.com/hernad/consul-template/pull/1695), [GH-1637](https://github.com/hernad/consul-template/issues/1637)]
+* tweak defaults for performance improvements [[GH-1697](https://github.com/hernad/consul-template/pull/1697), [GH-1603](https://github.com/hernad/consul-template/issues/1603)]
 
 BUG FIXES:
-* properly respect reload/kill configured signals [[GH-1690](https://github.com/hashicorp/consul-template/pull/1690), [GH-1671](https://github.com/hashicorp/consul-template/issues/1671)]
-* Fix 'toTitle' function for a better support for word boundaries and unicode punctuation [[GH-1678](https://github.com/hashicorp/consul-template/pull/1678)]
+* properly respect reload/kill configured signals [[GH-1690](https://github.com/hernad/consul-template/pull/1690), [GH-1671](https://github.com/hernad/consul-template/issues/1671)]
+* Fix 'toTitle' function for a better support for word boundaries and unicode punctuation [[GH-1678](https://github.com/hernad/consul-template/pull/1678)]
 
 ## v0.29.6 (Nov 30, 2022)
 
 BUG FIXES:
-* Force kill fails to kill the process group in exec mode [[GH-1666](https://github.com/hashicorp/consul-template/issues/1666), [GH-1668](https://github.com/hashicorp/consul-template/pull/1668)]
-* Fix user set in dockerfile [[GH-1662](https://github.com/hashicorp/consul-template/pull/1662)]
-* Module version update to x/text package for CVE-2022-32149, though the CVE didn't impact consul-template [[GH-1655](https://github.com/hashicorp/consul-template/issues/1655)]
+* Force kill fails to kill the process group in exec mode [[GH-1666](https://github.com/hernad/consul-template/issues/1666), [GH-1668](https://github.com/hernad/consul-template/pull/1668)]
+* Fix user set in dockerfile [[GH-1662](https://github.com/hernad/consul-template/pull/1662)]
+* Module version update to x/text package for CVE-2022-32149, though the CVE didn't impact consul-template [[GH-1655](https://github.com/hernad/consul-template/issues/1655)]
 
 IMPROVEMENTS:
-* Update build to use 1.18+ to add template support for continue and break [[GH-1663](https://github.com/hashicorp/consul-template/issues/1663)]
-* Template function 'splitToMap' [[GH-1664](https://github.com/hashicorp/consul-template/pull/1664)]
-* Template function 'mustEnv' [[GH-1657](https://github.com/hashicorp/consul-template/pull/1657)]
+* Update build to use 1.18+ to add template support for continue and break [[GH-1663](https://github.com/hernad/consul-template/issues/1663)]
+* Template function 'splitToMap' [[GH-1664](https://github.com/hernad/consul-template/pull/1664)]
+* Template function 'mustEnv' [[GH-1657](https://github.com/hernad/consul-template/pull/1657)]
 
 ## v0.29.5 (Oct 04, 2022)
 
 BUG FIXES:
-* Fix issue with ownership change detection incorrectly indicating a change when a user or group was set but not both [[GH-1652](https://github.com/hashicorp/consul-template/pull/1652)]
-* Fix issue with nomad configuration setup [[GH-1653](https://github.com/hashicorp/consul-template/pull/1653)]
+* Fix issue with ownership change detection incorrectly indicating a change when a user or group was set but not both [[GH-1652](https://github.com/hernad/consul-template/pull/1652)]
+* Fix issue with nomad configuration setup [[GH-1653](https://github.com/hernad/consul-template/pull/1653)]
 
 ## v0.29.4 (Sept 30, 2022)
 
 BUG FIXES:
-* Fix goroutine leak in vault token watcher on config reload. [[GH-1650](https://github.com/hashicorp/consul-template/issues/1650)]
+* Fix goroutine leak in vault token watcher on config reload. [[GH-1650](https://github.com/hernad/consul-template/issues/1650)]
 
 ## v0.29.3 (Sept 30, 2022)
 
 IMPROVEMENTS:
-* Vault token management refactor to increase encapsulation and enable testing. [[GH-1645](https://github.com/hashicorp/consul-template/pull/1645)]
+* Vault token management refactor to increase encapsulation and enable testing. [[GH-1645](https://github.com/hernad/consul-template/pull/1645)]
 
 BUG FIXES:
-* Log child process successful exits at INFO level (not ERR). [[GH-1649](https://github.com/hashicorp/consul-template/pull/1649), [GH-1282](https://github.com/hashicorp/consul-template/issues/1282)]
-* Fix reading vault agent token in wrapped format [[GH-1498](https://github.com/hashicorp/consul-template/issues/1498)]
-* Fix issue with transient goroutine leak causing unnecessary memory growth. [[GH-1644](https://github.com/hashicorp/consul-template/pull/1644)]
-* Fix issue with pkiCerts failing if cert file is moved. [[GH-1639](https://github.com/hashicorp/consul-template/pull/1639)]
+* Log child process successful exits at INFO level (not ERR). [[GH-1649](https://github.com/hernad/consul-template/pull/1649), [GH-1282](https://github.com/hernad/consul-template/issues/1282)]
+* Fix reading vault agent token in wrapped format [[GH-1498](https://github.com/hernad/consul-template/issues/1498)]
+* Fix issue with transient goroutine leak causing unnecessary memory growth. [[GH-1644](https://github.com/hernad/consul-template/pull/1644)]
+* Fix issue with pkiCerts failing if cert file is moved. [[GH-1639](https://github.com/hernad/consul-template/pull/1639)]
 
 
 ## v0.29.2 (Aug 16, 2022)
 
 IMPROVEMENTS:
-* Nomad services support use of `byTab` template function. [[GH-1594](https://github.com/hashicorp/consul-template/pull/1594)]
+* Nomad services support use of `byTab` template function. [[GH-1594](https://github.com/hernad/consul-template/pull/1594)]
 
 BUG FIXES:
-* Fix issue with pkiCert caching certificate based on consul key path. [[GH-1611](https://github.com/hashicorp/consul-template/pull/1611), [GH-1607](https://github.com/hashicorp/consul-template/issues/1607)]
-* Fix issue with setting the reload_signal to an empty string ("") not disabling the reload_signal as documented. [[GH-1610](https://github.com/hashicorp/consul-template/pull/1610), [GH-1428](https://github.com/hashicorp/consul-template/issues/1428), [GH-1442](https://github.com/hashicorp/consul-template/issues/1442)]
-* Limit Setgpid setting to strictly `sh -c` wrapped calls. [[GH-1600](https://github.com/hashicorp/consul-template/pull/1600), [GH-1604](https://github.com/hashicorp/consul-template/issues/1604)]
-* Fix potential for nil pointer dereference in vault config debug output. [[GH-1586](https://github.com/hashicorp/consul-template/issues/1586)]
+* Fix issue with pkiCert caching certificate based on consul key path. [[GH-1611](https://github.com/hernad/consul-template/pull/1611), [GH-1607](https://github.com/hernad/consul-template/issues/1607)]
+* Fix issue with setting the reload_signal to an empty string ("") not disabling the reload_signal as documented. [[GH-1610](https://github.com/hernad/consul-template/pull/1610), [GH-1428](https://github.com/hernad/consul-template/issues/1428), [GH-1442](https://github.com/hernad/consul-template/issues/1442)]
+* Limit Setgpid setting to strictly `sh -c` wrapped calls. [[GH-1600](https://github.com/hernad/consul-template/pull/1600), [GH-1604](https://github.com/hernad/consul-template/issues/1604)]
+* Fix potential for nil pointer dereference in vault config debug output. [[GH-1586](https://github.com/hernad/consul-template/issues/1586)]
 
 SECURITY:
-* Filter Vault Secrets from text/template error messages, [CVE-2022-38149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38149). [[GH-1613](https://github.com/hashicorp/consul-template/pull/1613)]
-* Updates dependencies several of which had known CVEs. [[GH-1622](https://github.com/hashicorp/consul-template/pull/1622), [GH-1614](https://github.com/hashicorp/consul-template/issues/1614)]
+* Filter Vault Secrets from text/template error messages, [CVE-2022-38149](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38149). [[GH-1613](https://github.com/hernad/consul-template/pull/1613)]
+* Updates dependencies several of which had known CVEs. [[GH-1622](https://github.com/hernad/consul-template/pull/1622), [GH-1614](https://github.com/hernad/consul-template/issues/1614)]
 
 
 ## v0.29.1 (Jun 24, 2022)
 
 IMPROVEMENTS:
 
-* Kubernetets Vault authentication support [[GH-1580](https://github.com/hashicorp/consul-template/pull/1580)]
-* Nomad: add support for querying consistent subset of services [[GH-1579](https://github.com/hashicorp/consul-template/pull/1579)]
+* Kubernetets Vault authentication support [[GH-1580](https://github.com/hernad/consul-template/pull/1580)]
+* Nomad: add support for querying consistent subset of services [[GH-1579](https://github.com/hernad/consul-template/pull/1579)]
 
 BUG FIXES:
 
-* pkiCert now useful, getting the certificate, private key and CA [[GH-1591](https://github.com/hashicorp/consul-template/pull/1591), [1567](https://github.com/hashicorp/consul-template/issues/1567)]
-* fix issue with VaultConfig debug printing [[GH-1587](https://github.com/hashicorp/consul-template/pull/1587)]
-* update crypto package version [[GH-1592](https://github.com/hashicorp/consul-template/pull/1592), [GH-1582](https://github.com/hashicorp/consul-template/issues/1582)]
-* fix sort.Stable sorting [[GH-1578](https://github.com/hashicorp/consul-template/pull/1578)]
+* pkiCert now useful, getting the certificate, private key and CA [[GH-1591](https://github.com/hernad/consul-template/pull/1591), [1567](https://github.com/hernad/consul-template/issues/1567)]
+* fix issue with VaultConfig debug printing [[GH-1587](https://github.com/hernad/consul-template/pull/1587)]
+* update crypto package version [[GH-1592](https://github.com/hernad/consul-template/pull/1592), [GH-1582](https://github.com/hernad/consul-template/issues/1582)]
+* fix sort.Stable sorting [[GH-1578](https://github.com/hernad/consul-template/pull/1578)]
 
 
 ## v0.29.0 (Apr 20, 2022)
 
 IMPROVEMENTS:
-* Nomad Service Discovery! [[GH-1565](https://github.com/hashicorp/consul-template/pull/1565)]
-* New `pkiCert` template function provides self-caching certificates [[GH-1559](https://github.com/hashicorp/consul-template/pull/1559), [GH-1259](https://github.com/hashicorp/consul-template/issues/1259)]
-* Add string trim template functions [[GH-1558](https://github.com/hashicorp/consul-template/pull/1558), [GH-1544](https://github.com/hashicorp/consul-template/issues/1544)]
+* Nomad Service Discovery! [[GH-1565](https://github.com/hernad/consul-template/pull/1565)]
+* New `pkiCert` template function provides self-caching certificates [[GH-1559](https://github.com/hernad/consul-template/pull/1559), [GH-1259](https://github.com/hernad/consul-template/issues/1259)]
+* Add string trim template functions [[GH-1558](https://github.com/hernad/consul-template/pull/1558), [GH-1544](https://github.com/hernad/consul-template/issues/1544)]
 
 BUG FIXES:
-* Fix issue with multiple identical templates using the same path [[GH-1573](https://github.com/hashicorp/consul-template/pull/1573)]
-* Reduce signal processing overhead [[GH-1575](https://github.com/hashicorp/consul-template/pull/1575), [GH-1548](https://github.com/hashicorp/consul-template/issues/1548)]
-* Fix issue with template user/group setting [[GH-1571](https://github.com/hashicorp/consul-template/pull/1571), [GH-1570](https://github.com/hashicorp/consul-template/issues/1570)]
+* Fix issue with multiple identical templates using the same path [[GH-1573](https://github.com/hernad/consul-template/pull/1573)]
+* Reduce signal processing overhead [[GH-1575](https://github.com/hernad/consul-template/pull/1575), [GH-1548](https://github.com/hernad/consul-template/issues/1548)]
+* Fix issue with template user/group setting [[GH-1571](https://github.com/hernad/consul-template/pull/1571), [GH-1570](https://github.com/hernad/consul-template/issues/1570)]
 
 
 ## v0.28.1 (Apr 04, 2022)
 
 IMPROVEMENTS:
-* Allow setting template destination file ownership by name (with uid/gid compatibilty) [[GH-1541](https://github.com/hashicorp/consul-template/pull/1541), [GH-1551](https://github.com/hashicorp/consul-template/pull/1551)]
-* better writeToFile user/group ownership behaviors [[GH-1549](https://github.com/hashicorp/consul-template/pull/1549)]
-* configurable lease check wait for non-renewable secrets [[GH-1546](https://github.com/hashicorp/consul-template/pull/1546)]
+* Allow setting template destination file ownership by name (with uid/gid compatibilty) [[GH-1541](https://github.com/hernad/consul-template/pull/1541), [GH-1551](https://github.com/hernad/consul-template/pull/1551)]
+* better writeToFile user/group ownership behaviors [[GH-1549](https://github.com/hernad/consul-template/pull/1549)]
+* configurable lease check wait for non-renewable secrets [[GH-1546](https://github.com/hernad/consul-template/pull/1546)]
 
 ## v0.28.0 (Mar 04, 2022)
 
 BUG FIXES:
-* Fix issue returning typed nil pointers in template functions [[GH-1535](https://github.com/hashicorp/consul-template/pull/1535), [GH-1418](https://github.com/hashicorp/consul-template/issues/1418)]
-* Support secret write queries w/ an empty write [[GH-1532](https://github.com/hashicorp/consul-template/pull/1532), [GH-1453](https://github.com/hashicorp/consul-template/issues/1453)]
+* Fix issue returning typed nil pointers in template functions [[GH-1535](https://github.com/hernad/consul-template/pull/1535), [GH-1418](https://github.com/hernad/consul-template/issues/1418)]
+* Support secret write queries w/ an empty write [[GH-1532](https://github.com/hernad/consul-template/pull/1532), [GH-1453](https://github.com/hernad/consul-template/issues/1453)]
 
 
 IMPROVEMENTS:
-* Add sprig library [[GH-1312](https://github.com/hashicorp/consul-template/pull/1312)]
-* Add option to make template errors non-fatal [[GH-1420](https://github.com/hashicorp/consul-template/pull/1420), [GH-1419](https://github.com/hashicorp/consul-template/issues/1419), [GH-1289](https://github.com/hashicorp/consul-template/issues/1289)]
-* Support for accepting a custom logger for a child process [[GH-1515](https://github.com/hashicorp/consul-template/pull/1515)]
-* Add support for providing Consul ACL Token via a file [[GH-1516](https://github.com/hashicorp/consul-template/pull/1516), [GH-1429](https://github.com/hashicorp/consul-template/issues/1429)]
-* Allow setting user/group ownership of template output [[GH-1531](https://github.com/hashicorp/consul-template/pull/1531), [GH-1497](https://github.com/hashicorp/consul-template/issues/1497), [GH-639](https://github.com/hashicorp/consul-template/issues/639)]
-* Logging to file [[GH-1534](https://github.com/hashicorp/consul-template/pull/1534), [GH-1416](https://github.com/hashicorp/consul-template/issues/1416)]]
-* Support command/exec lists [[GH-1543](https://github.com/hashicorp/consul-template/pull/1543), [GH-1518](https://github.com/hashicorp/consul-template/issues/1518)]
+* Add sprig library [[GH-1312](https://github.com/hernad/consul-template/pull/1312)]
+* Add option to make template errors non-fatal [[GH-1420](https://github.com/hernad/consul-template/pull/1420), [GH-1419](https://github.com/hernad/consul-template/issues/1419), [GH-1289](https://github.com/hernad/consul-template/issues/1289)]
+* Support for accepting a custom logger for a child process [[GH-1515](https://github.com/hernad/consul-template/pull/1515)]
+* Add support for providing Consul ACL Token via a file [[GH-1516](https://github.com/hernad/consul-template/pull/1516), [GH-1429](https://github.com/hernad/consul-template/issues/1429)]
+* Allow setting user/group ownership of template output [[GH-1531](https://github.com/hernad/consul-template/pull/1531), [GH-1497](https://github.com/hernad/consul-template/issues/1497), [GH-639](https://github.com/hernad/consul-template/issues/639)]
+* Logging to file [[GH-1534](https://github.com/hernad/consul-template/pull/1534), [GH-1416](https://github.com/hernad/consul-template/issues/1416)]]
+* Support command/exec lists [[GH-1543](https://github.com/hernad/consul-template/pull/1543), [GH-1518](https://github.com/hernad/consul-template/issues/1518)]
 
 
 ## v0.27.2 (Nov 05, 2021)
 
 BUG FIXES:
-* Syslog doesn't work after upgrade to 0.27 [[GH-1523](https://github.com/hashicorp/consul-template/issues/1523), [GH-1529](https://github.com/hashicorp/consul-template/pull/1529)]
+* Syslog doesn't work after upgrade to 0.27 [[GH-1523](https://github.com/hernad/consul-template/issues/1523), [GH-1529](https://github.com/hernad/consul-template/pull/1529)]
 
 ## v0.27.1 (Sep 22, 2021)
 
@@ -136,27 +136,27 @@ IMPROVEMENTS:
   is a single word (no spaces). This allows docker to run in environments (like
   a minimal docker image) where there is no shell (`sh`). Multi-word commands
   will continue to use the wrapping shell call.
-  [[GH-1509](https://github.com/hashicorp/consul-template/pull/1509),
-  [GH-1508](https://github.com/hashicorp/consul-template/issues/1508)]
+  [[GH-1509](https://github.com/hernad/consul-template/pull/1509),
+  [GH-1508](https://github.com/hernad/consul-template/issues/1508)]
 
 SECURITY:
-* Updated golang.or/x/crypto dependency for CVE-2020-29652. [[GH-1507](https://github.com/hashicorp/consul-template/issues/1507)]
+* Updated golang.or/x/crypto dependency for CVE-2020-29652. [[GH-1507](https://github.com/hernad/consul-template/issues/1507)]
 
 
 ## v0.27.0 (Aug 16, 2021)
 
 BREAKING CHANGES:
-* All command execution calls are now made (on \*nix systems) using a shell command call ('/bin/sh -c ...') with [process group](https://man7.org/linux/man-pages/man2/setpgid.2.html) set to ensure all signals are propagated to the called commands. This was done to eliminate the need for parsing the shell command as it was a continual source of bugs. Windows systems currently only support single command calls because of no (known) 'sh -c' equivalent on Windows. [[GH-1496](https://github.com/hashicorp/consul-template/pull/1496), [GH-1494](https://github.com/hashicorp/consul-template/pull/1494)]
+* All command execution calls are now made (on \*nix systems) using a shell command call ('/bin/sh -c ...') with [process group](https://man7.org/linux/man-pages/man2/setpgid.2.html) set to ensure all signals are propagated to the called commands. This was done to eliminate the need for parsing the shell command as it was a continual source of bugs. Windows systems currently only support single command calls because of no (known) 'sh -c' equivalent on Windows. [[GH-1496](https://github.com/hernad/consul-template/pull/1496), [GH-1494](https://github.com/hernad/consul-template/pull/1494)]
 
 IMPROVEMENTS:
-* New Docker Image. Similar to old Alpine image but modernized and simplified [[GH-1481](https://github.com/hashicorp/consul-template/issues/1481), [GH-1484](https://github.com/hashicorp/consul-template/pull/1484)]
-* New, more obvious, log level environment variable [[GH-1383](https://github.com/hashicorp/consul-template/pull/1383)]
-* New 'writeToFile' template function [[GH-1495](https://github.com/hashicorp/consul-template/pull/1495), [GH-1077](https://github.com/hashicorp/consul-template/issues/1077)]
-* New mergeMap and mergeMapWithOverride template functions [[GH-1500](https://github.com/hashicorp/consul-template/pull/1500), [GH-1499](https://github.com/hashicorp/consul-template/issues/1499)].
+* New Docker Image. Similar to old Alpine image but modernized and simplified [[GH-1481](https://github.com/hernad/consul-template/issues/1481), [GH-1484](https://github.com/hernad/consul-template/pull/1484)]
+* New, more obvious, log level environment variable [[GH-1383](https://github.com/hernad/consul-template/pull/1383)]
+* New 'writeToFile' template function [[GH-1495](https://github.com/hernad/consul-template/pull/1495), [GH-1077](https://github.com/hernad/consul-template/issues/1077)]
+* New mergeMap and mergeMapWithOverride template functions [[GH-1500](https://github.com/hernad/consul-template/pull/1500), [GH-1499](https://github.com/hernad/consul-template/issues/1499)].
 
 BUG FIXES:
-* Ignore SIGURG signals by default [[GH-1486](https://github.com/hashicorp/consul-template/issues/1486), [GH-1487](https://github.com/hashicorp/consul-template/pull/1487)]
-* Fix issue with command argument parsing when using sub-shell calls [[GH-1482](https://github.com/hashicorp/consul-template/issues/1482)]
+* Ignore SIGURG signals by default [[GH-1486](https://github.com/hernad/consul-template/issues/1486), [GH-1487](https://github.com/hernad/consul-template/pull/1487)]
+* Fix issue with command argument parsing when using sub-shell calls [[GH-1482](https://github.com/hernad/consul-template/issues/1482)]
 
 ## v0.26.0 (Jun 10, 2021)
 
@@ -164,143 +164,143 @@ BREAKING CHANGES:
 * Docker: We have moved to a new Docker image build pipeline that is creating a simplified image containing only the executable, meant primarily to be used as a base image. If you would like the previous, more complex image back please file an issue. Thanks.
 
 IMPROVEMENTS:
-* Arm CPUs no longer need special builds [[GH-1471](https://github.com/hashicorp/consul-template/pull/1471), [GH-1404](https://github.com/hashicorp/consul-template/issues/1404)]
-* add 'md5sum' template function [[GH-1464](https://github.com/hashicorp/consul-template/pull/1464)]
-* add 'envOrDefault' template function [[GH-1461](https://github.com/hashicorp/consul-template/pull/1461), [GH-829](https://github.com/hashicorp/consul-template/issues/829)]
-* configurable Vault default lease duration [[GH-1446](https://github.com/hashicorp/consul-template/pull/1446), [GH-1445](https://github.com/hashicorp/consul-template/issues/1445)]
-* unescaped JSON template filter functions [[GH-1432](https://github.com/hashicorp/consul-template/pull/1432), [GH-1430](https://github.com/hashicorp/consul-template/issues/1430)]
-* go spew debugging template functions [[GH-1406](https://github.com/hashicorp/consul-template/pull/1406)]
-* add service tagged addresses to health service data [[GH-1400](https://github.com/hashicorp/consul-template/pull/1400), [GH-1398](https://github.com/hashicorp/consul-template/issues/1398)]
-* allow running via Windows Service Control [[GH-1382](https://github.com/hashicorp/consul-template/pull/1382)]
+* Arm CPUs no longer need special builds [[GH-1471](https://github.com/hernad/consul-template/pull/1471), [GH-1404](https://github.com/hernad/consul-template/issues/1404)]
+* add 'md5sum' template function [[GH-1464](https://github.com/hernad/consul-template/pull/1464)]
+* add 'envOrDefault' template function [[GH-1461](https://github.com/hernad/consul-template/pull/1461), [GH-829](https://github.com/hernad/consul-template/issues/829)]
+* configurable Vault default lease duration [[GH-1446](https://github.com/hernad/consul-template/pull/1446), [GH-1445](https://github.com/hernad/consul-template/issues/1445)]
+* unescaped JSON template filter functions [[GH-1432](https://github.com/hernad/consul-template/pull/1432), [GH-1430](https://github.com/hernad/consul-template/issues/1430)]
+* go spew debugging template functions [[GH-1406](https://github.com/hernad/consul-template/pull/1406)]
+* add service tagged addresses to health service data [[GH-1400](https://github.com/hernad/consul-template/pull/1400), [GH-1398](https://github.com/hernad/consul-template/issues/1398)]
+* allow running via Windows Service Control [[GH-1382](https://github.com/hernad/consul-template/pull/1382)]
 
 BUG FIXES:
-* fix command shell quoting issue [[GH-1477](https://github.com/hashicorp/consul-template/pull/1477), [GH-1456](https://github.com/hashicorp/consul-template/issues/1456), [GH-1463](https://github.com/hashicorp/consul-template/issues/1463)]
-* rework logging, add tests and fix missing timestamp issue [[GH-1476](https://github.com/hashicorp/consul-template/pull/1476), [GH-1475](https://github.com/hashicorp/consul-template/issues/1475)]
-* fix issue with connect/health services using same cache entry [[GH-1474](https://github.com/hashicorp/consul-template/pull/1474), [GH-1458](https://github.com/hashicorp/consul-template/issues/1458)]
-* fix issue with ownership when perms option is set [[GH-1473](https://github.com/hashicorp/consul-template/pull/1473), [GH-1379](https://github.com/hashicorp/consul-template/issues/1379)]
-* fixes issue with 'secrets' and Vault kv-v2 [[GH-1468](https://github.com/hashicorp/consul-template/pull/1468), [GH-1274](https://github.com/hashicorp/consul-template/issues/1274), [GH-1275](https://github.com/hashicorp/consul-template/issues/1275),  [GH-1462](https://github.com/hashicorp/consul-template/issues/1462)]
+* fix command shell quoting issue [[GH-1477](https://github.com/hernad/consul-template/pull/1477), [GH-1456](https://github.com/hernad/consul-template/issues/1456), [GH-1463](https://github.com/hernad/consul-template/issues/1463)]
+* rework logging, add tests and fix missing timestamp issue [[GH-1476](https://github.com/hernad/consul-template/pull/1476), [GH-1475](https://github.com/hernad/consul-template/issues/1475)]
+* fix issue with connect/health services using same cache entry [[GH-1474](https://github.com/hernad/consul-template/pull/1474), [GH-1458](https://github.com/hernad/consul-template/issues/1458)]
+* fix issue with ownership when perms option is set [[GH-1473](https://github.com/hernad/consul-template/pull/1473), [GH-1379](https://github.com/hernad/consul-template/issues/1379)]
+* fixes issue with 'secrets' and Vault kv-v2 [[GH-1468](https://github.com/hernad/consul-template/pull/1468), [GH-1274](https://github.com/hernad/consul-template/issues/1274), [GH-1275](https://github.com/hernad/consul-template/issues/1275),  [GH-1462](https://github.com/hernad/consul-template/issues/1462)]
 
 
 ## v0.25.2 (Feb 19, 2021)
 
 BREAKING CHANGES:
-* version output from -v/-version should go to STDOUT (not STDERR)[[GH-1452](https://github.com/hashicorp/consul-template/issues/1452), [GH-1455](https://github.com/hashicorp/consul-template/pull/1455)]
-* log date output format consistency fix [[GH-1412](https://github.com/hashicorp/consul-template/pull/1412)]
+* version output from -v/-version should go to STDOUT (not STDERR)[[GH-1452](https://github.com/hernad/consul-template/issues/1452), [GH-1455](https://github.com/hernad/consul-template/pull/1455)]
+* log date output format consistency fix [[GH-1412](https://github.com/hernad/consul-template/pull/1412)]
 
 BUG FIXES:
-* fix extra logging/broken log levels [[GH-1438](https://github.com/hashicorp/consul-template/issues/1438), [GH-1426](https://github.com/hashicorp/consul-template/issues/1426), [GH-1454](https://github.com/hashicorp/consul-template/pull/1454), []()]
-* fix issue with vault secret panic/missing nil check [[GH-1450](https://github.com/hashicorp/consul-template/issues/1450), [GH-1447](https://github.com/hashicorp/consul-template/pull/1447)]
-* Override block_query_wait doesn't work [[GH-1441](https://github.com/hashicorp/consul-template/issues/1441), [GH-1443](https://github.com/hashicorp/consul-template/pull/1443)]
+* fix extra logging/broken log levels [[GH-1438](https://github.com/hernad/consul-template/issues/1438), [GH-1426](https://github.com/hernad/consul-template/issues/1426), [GH-1454](https://github.com/hernad/consul-template/pull/1454), []()]
+* fix issue with vault secret panic/missing nil check [[GH-1450](https://github.com/hernad/consul-template/issues/1450), [GH-1447](https://github.com/hernad/consul-template/pull/1447)]
+* Override block_query_wait doesn't work [[GH-1441](https://github.com/hernad/consul-template/issues/1441), [GH-1443](https://github.com/hernad/consul-template/pull/1443)]
 
 IMPROVEMENTS:
-* vault secret ttl handling [[Gh-1451](https://github.com/hashicorp/consul-template/pull/1451)]
+* vault secret ttl handling [[Gh-1451](https://github.com/hernad/consul-template/pull/1451)]
 
 ## v0.25.1 (Jul 27, 2020)
 
 IMPROVEMENTS:
-* Update whitelist/blacklist config options to allowlist/denylist with backward compatibility [[GH-1388](https://github.com/hashicorp/consul-template/pull/1388)]
+* Update whitelist/blacklist config options to allowlist/denylist with backward compatibility [[GH-1388](https://github.com/hernad/consul-template/pull/1388)]
 
 BUG FIXES:
-* Fix issue rendering empty file to disk [[GH-1393](https://github.com/hashicorp/consul-template/issues/1393)][[GH-1397](https://github.com/hashicorp/consul-template/pull/1397)]
-* Fix issue with Vault PKI cert expiration [[GH-1394](https://github.com/hashicorp/consul-template/pull/1394)]
-* Fix issue reading Vault KVv2 secrets metadata [[GH-1396](https://github.com/hashicorp/consul-template/issues/1396)][[GH-1399](https://github.com/hashicorp/consul-template/pull/1399)]
+* Fix issue rendering empty file to disk [[GH-1393](https://github.com/hernad/consul-template/issues/1393)][[GH-1397](https://github.com/hernad/consul-template/pull/1397)]
+* Fix issue with Vault PKI cert expiration [[GH-1394](https://github.com/hernad/consul-template/pull/1394)]
+* Fix issue reading Vault KVv2 secrets metadata [[GH-1396](https://github.com/hernad/consul-template/issues/1396)][[GH-1399](https://github.com/hernad/consul-template/pull/1399)]
 
 ## v0.25.0 (Apr 27, 2020)
 
 IMPROVEMENTS:
 
-* Add minimum and maximum math functions [[GH-1323](https://github.com/hashicorp/consul-template/pull/1323)]
+* Add minimum and maximum math functions [[GH-1323](https://github.com/hernad/consul-template/pull/1323)]
 
-* Allow overriding the default delimiter [[GH-1290](https://github.com/hashicorp/consul-template/pull/1290)]
+* Allow overriding the default delimiter [[GH-1290](https://github.com/hernad/consul-template/pull/1290)]
 
-* Add weights field for HealthService [[GH-1288](https://github.com/hashicorp/consul-template/pull/1288)]
+* Add weights field for HealthService [[GH-1288](https://github.com/hernad/consul-template/pull/1288)]
 
-* Beta support for Consul Namespaces (Consul Enterprise feature) [[GH-1320](https://github.com/hashicorp/consul-template/pull/1320), [GH-1303](https://github.com/hashicorp/consul-template/issues/1303)]
+* Beta support for Consul Namespaces (Consul Enterprise feature) [[GH-1320](https://github.com/hernad/consul-template/pull/1320), [GH-1303](https://github.com/hernad/consul-template/issues/1303)]
 
-* Added sha256Hex function [[GH-1327](https://github.com/hashicorp/consul-template/pull/1327)]
+* Added sha256Hex function [[GH-1327](https://github.com/hernad/consul-template/pull/1327)]
 
-* Make timeout for blocking query configurable [[GH-1329](https://github.com/hashicorp/consul-template/pull/1329)]
+* Make timeout for blocking query configurable [[GH-1329](https://github.com/hernad/consul-template/pull/1329)]
 
-* docker: alpine without docker-base [[GH-1333](https://github.com/hashicorp/consul-template/pull/1333)]
+* docker: alpine without docker-base [[GH-1333](https://github.com/hernad/consul-template/pull/1333)]
 
-* Add parseYAML helper [[GH-1344](https://github.com/hashicorp/consul-template/pull/1344)]
+* Add parseYAML helper [[GH-1344](https://github.com/hernad/consul-template/pull/1344)]
 
-* Add lease calculation for rotating secrets [[GH-1358](https://github.com/hashicorp/consul-template/pull/1358)]
+* Add lease calculation for rotating secrets [[GH-1358](https://github.com/hernad/consul-template/pull/1358)]
 
-* Allow to set application name in syslog [[GH-1367](https://github.com/hashicorp/consul-template/pull/1367)]
+* Allow to set application name in syslog [[GH-1367](https://github.com/hernad/consul-template/pull/1367)]
 
 
 BUG FIXES:
 
-* Don't renew vault token when no token is set [[GH-1352](https://github.com/hashicorp/consul-template/pull/1352), [GH-1297](https://github.com/hashicorp/consul-template/issues/1297)]
+* Don't renew vault token when no token is set [[GH-1352](https://github.com/hernad/consul-template/pull/1352), [GH-1297](https://github.com/hernad/consul-template/issues/1297)]
 
-* Fix bug looking up versioned vault secrets [[GH-1354](https://github.com/hashicorp/consul-template/pull/1354), [GH-1350](https://github.com/hashicorp/consul-template/issues/1350)]
+* Fix bug looking up versioned vault secrets [[GH-1354](https://github.com/hernad/consul-template/pull/1354), [GH-1350](https://github.com/hernad/consul-template/issues/1350)]
 
-* Fix issue reading kv2 vault secrets for key paths starting with "data" [[GH-1341](https://github.com/hashicorp/consul-template/pull/1341), [GH-1340](https://github.com/hashicorp/consul-template/issues/1340)]
+* Fix issue reading kv2 vault secrets for key paths starting with "data" [[GH-1341](https://github.com/hernad/consul-template/pull/1341), [GH-1340](https://github.com/hernad/consul-template/issues/1340)]
 
-* Fix data race in child.go [[GH-1373](https://github.com/hashicorp/consul-template/pull/1373), [GH-1372](https://github.com/hashicorp/consul-template/issues/1372)]
+* Fix data race in child.go [[GH-1373](https://github.com/hernad/consul-template/pull/1373), [GH-1372](https://github.com/hernad/consul-template/issues/1372)]
 
-* Fix issue with template commands when used as library [[GH-1370](https://github.com/hashicorp/consul-template/pull/1370), [GH-1369](https://github.com/hashicorp/consul-template/issues/1369)]
+* Fix issue with template commands when used as library [[GH-1370](https://github.com/hernad/consul-template/pull/1370), [GH-1369](https://github.com/hernad/consul-template/issues/1369)]
 
 DOCUMENTATION:
 
-* How to run multiple things in template commands [[GH-1375](https://github.com/hashicorp/consul-template/pull/1375)]
+* How to run multiple things in template commands [[GH-1375](https://github.com/hernad/consul-template/pull/1375)]
 
-* Template command_timeout clarifications [[GH-1370](https://github.com/hashicorp/consul-template/pull/1370), [GH-1369](https://github.com/hashicorp/consul-template/issues/1369)]
+* Template command_timeout clarifications [[GH-1370](https://github.com/hernad/consul-template/pull/1370), [GH-1369](https://github.com/hernad/consul-template/issues/1369)]
 
-* ByMeta does not accept `services` as input [[GH-1348](https://github.com/hashicorp/consul-template/issues/1348)]
+* ByMeta does not accept `services` as input [[GH-1348](https://github.com/hernad/consul-template/issues/1348)]
 
 
 ## v0.24.1 (Jan 24, 2020)
 
 BUG FIXES:
 
-* Make user non-numeric to satisfy PSP [[GH-1332](https://github.com/hashicorp/consul-template/pull/1332)]
-* fatal error: PowerRegisterSuspendResumeNotification failure on windows [[GH-1335](https://github.com/hashicorp/consul-template/issues/1335)]
+* Make user non-numeric to satisfy PSP [[GH-1332](https://github.com/hernad/consul-template/pull/1332)]
+* fatal error: PowerRegisterSuspendResumeNotification failure on windows [[GH-1335](https://github.com/hernad/consul-template/issues/1335)]
 
 ## v0.24.0 (Jan 08, 2020)
 
 BREAKING CHANGES:
 
-* Alpine Docker image no longer runs as root and so doesn't change ownership of the /consul-template/data and /consul-template/config directories to the consul-template user. See the [Docker Image Use](https://github.com/hashicorp/consul-template#docker-image-use) topic in the documentation for more.
+* Alpine Docker image no longer runs as root and so doesn't change ownership of the /consul-template/data and /consul-template/config directories to the consul-template user. See the [Docker Image Use](https://github.com/hernad/consul-template#docker-image-use) topic in the documentation for more.
 
 BUG FIXES:
 
-* arm builds are linked against wrong library [[GH-1317](https://github.com/hashicorp/consul-template/issues/1317), [GH-1326](https://github.com/hashicorp/consul-template/pull/1326)]
-* consul-template container runs as root - breaks CISO compliance [[GH-1321](https://github.com/hashicorp/consul-template/issues/1321), [GH-1324](https://github.com/hashicorp/consul-template/pull/1324)]
-* 'sockaddr' function returning whitespace after address [[GH-1314](https://github.com/hashicorp/consul-template/issues/1314), [GH-1315](https://github.com/hashicorp/consul-template/pull/1315)]
-* runTemplate - DEBUG logging is needed to identify missing dependencies [[GH-1308](https://github.com/hashicorp/consul-template/issues/1308), [GH-1309](https://github.com/hashicorp/consul-template/pull/1309)]
-* Remove code/logic for working with (long deprecated) Vault grace [[GH-1284](https://github.com/hashicorp/consul-template/pull/1284)]
+* arm builds are linked against wrong library [[GH-1317](https://github.com/hernad/consul-template/issues/1317), [GH-1326](https://github.com/hernad/consul-template/pull/1326)]
+* consul-template container runs as root - breaks CISO compliance [[GH-1321](https://github.com/hernad/consul-template/issues/1321), [GH-1324](https://github.com/hernad/consul-template/pull/1324)]
+* 'sockaddr' function returning whitespace after address [[GH-1314](https://github.com/hernad/consul-template/issues/1314), [GH-1315](https://github.com/hernad/consul-template/pull/1315)]
+* runTemplate - DEBUG logging is needed to identify missing dependencies [[GH-1308](https://github.com/hernad/consul-template/issues/1308), [GH-1309](https://github.com/hernad/consul-template/pull/1309)]
+* Remove code/logic for working with (long deprecated) Vault grace [[GH-1284](https://github.com/hernad/consul-template/pull/1284)]
 
 ## v0.23.0 (Nov 13, 2019)
 
 IMPROVEMENTS:
 
-* Support Configuring Consul Connect Clients [[GH-1262](https://github.com/hashicorp/consul-template/issues/1262), [GH-1304](https://github.com/hashicorp/consul-template/pull/1304), [GH-1306](https://github.com/hashicorp/consul-template/pull/1306)]
+* Support Configuring Consul Connect Clients [[GH-1262](https://github.com/hernad/consul-template/issues/1262), [GH-1304](https://github.com/hernad/consul-template/pull/1304), [GH-1306](https://github.com/hernad/consul-template/pull/1306)]
 
 ## v0.22.1 (Nov 08, 2019)
 
 SECURITY:
 
-* curl is vulnerable in the latest alpine docker image [[GH-1302](https://github.com/hashicorp/consul-template/issues/1302)]
+* curl is vulnerable in the latest alpine docker image [[GH-1302](https://github.com/hernad/consul-template/issues/1302)]
 
 BUG FIXES:
 
-* fix breaking change for loop [[GH-1285](https://github.com/hashicorp/consul-template/issues/1285)]
+* fix breaking change for loop [[GH-1285](https://github.com/hernad/consul-template/issues/1285)]
 
 ## v0.22.0 (September 10, 2019)
 
 IMPROVEMENTS:
 
-* Add rate limiting to consul api calls [[GH-1279](https://github.com/hashicorp/consul-template/pull/1279)]
-* Add `byMeta` function [[GH-1237](https://github.com/hashicorp/consul-template/pull/1237)]
-* Add support for : and = in service tag values [[GH-1149](https://github.com/hashicorp/consul-template/pull/1149), [GH-1049](https://github.com/hashicorp/consul-template/issues/1049)]
-* Add `explodeMap` function [[GH-1148](https://github.com/hashicorp/consul-template/pull/1148)]
-* Don't wait for splay when stopping child runner [[GH-1141](https://github.com/hashicorp/consul-template/pull/1141)]
-* Add `safels` and `safetree` functions [[GH-1132](https://github.com/hashicorp/consul-template/pull/1132)]
-* Support Vault certificates with no lease [[GH-1106](https://github.com/hashicorp/consul-template/pull/1106)]
-* Add wrapper function for go-sockaddr templating [[GH-1087](https://github.com/hashicorp/consul-template/pull/1087)]
-* Build binaries for arm64 platform [[GH-1251](https://github.com/hashicorp/consul-template/pull/1251)]
+* Add rate limiting to consul api calls [[GH-1279](https://github.com/hernad/consul-template/pull/1279)]
+* Add `byMeta` function [[GH-1237](https://github.com/hernad/consul-template/pull/1237)]
+* Add support for : and = in service tag values [[GH-1149](https://github.com/hernad/consul-template/pull/1149), [GH-1049](https://github.com/hernad/consul-template/issues/1049)]
+* Add `explodeMap` function [[GH-1148](https://github.com/hernad/consul-template/pull/1148)]
+* Don't wait for splay when stopping child runner [[GH-1141](https://github.com/hernad/consul-template/pull/1141)]
+* Add `safels` and `safetree` functions [[GH-1132](https://github.com/hernad/consul-template/pull/1132)]
+* Support Vault certificates with no lease [[GH-1106](https://github.com/hernad/consul-template/pull/1106)]
+* Add wrapper function for go-sockaddr templating [[GH-1087](https://github.com/hernad/consul-template/pull/1087)]
+* Build binaries for arm64 platform [[GH-1251](https://github.com/hernad/consul-template/pull/1251)]
 
 BUG FIXES:
 
@@ -310,42 +310,42 @@ BUG FIXES:
 
 BUG FIXES:
 
-* Fix regression in non-renewable sleep [[GH-1277](https://github.com/hashicorp/consul-template/pull/1277), [GH-1272](https://github.com/hashicorp/consul-template/issues/1272), [GH-1276](https://github.com/hashicorp/consul-template/issues/1276)]
+* Fix regression in non-renewable sleep [[GH-1277](https://github.com/hernad/consul-template/pull/1277), [GH-1272](https://github.com/hernad/consul-template/issues/1272), [GH-1276](https://github.com/hernad/consul-template/issues/1276)]
 
 ## v0.21.2 (August 31, 2019)
 
 BUG FIXES:
 
-* Fix regression in backup [[GH-1271](https://github.com/hashicorp/consul-template/pull/1271), [GH-1270](https://github.com/hashicorp/consul-template/issues/1270)]
+* Fix regression in backup [[GH-1271](https://github.com/hernad/consul-template/pull/1271), [GH-1270](https://github.com/hernad/consul-template/issues/1270)]
 
 ## v0.21.1 (August 30, 2019)
 
 BUG FIXES:
 
-* Fixed issue in Vault call retry logic [[GH-1269](https://github.com/hashicorp/consul-template/pull/1269), [GH-1224](https://github.com/hashicorp/consul-template/issues/1224)]
-* Fixed race in backup [[GH-1265](https://github.com/hashicorp/consul-template/pull/1265), [GH-1264](https://github.com/hashicorp/consul-template/issues/1264)]
-* Fixed issue when reading deleted secret [[GH-1260](https://github.com/hashicorp/consul-template/pull/1260), [GH-1198](https://github.com/hashicorp/consul-template/issues/1198)]
-* Fix issue with Vault writes [[GH-1257](https://github.com/hashicorp/consul-template/pull/1257), [GH-1252](https://github.com/hashicorp/consul-template/issues/1252)]
-* Fix loop to work with template set integers [[GH-1255](https://github.com/hashicorp/consul-template/pull/1255), [GH-1143](https://github.com/hashicorp/consul-template/issues/1143)]
+* Fixed issue in Vault call retry logic [[GH-1269](https://github.com/hernad/consul-template/pull/1269), [GH-1224](https://github.com/hernad/consul-template/issues/1224)]
+* Fixed race in backup [[GH-1265](https://github.com/hernad/consul-template/pull/1265), [GH-1264](https://github.com/hernad/consul-template/issues/1264)]
+* Fixed issue when reading deleted secret [[GH-1260](https://github.com/hernad/consul-template/pull/1260), [GH-1198](https://github.com/hernad/consul-template/issues/1198)]
+* Fix issue with Vault writes [[GH-1257](https://github.com/hernad/consul-template/pull/1257), [GH-1252](https://github.com/hernad/consul-template/issues/1252)]
+* Fix loop to work with template set integers [[GH-1255](https://github.com/hernad/consul-template/pull/1255), [GH-1143](https://github.com/hernad/consul-template/issues/1143)]
 
 ## v0.21.0 (August 05, 2019)
 
 IMPROVEMENTS:
 
-* Migrated to use Go modules [[GH-1244](https://github.com/hashicorp/consul-template/pull/1244), [GH-1173](https://github.com/hashicorp/consul-template/issues/1173), [GH-1208](https://github.com/hashicorp/consul-template/pull/1208)[GH-1232](https://github.com/hashicorp/consul-template/pull/1232)]
-* Template blacklist feature [[GH-1243](https://github.com/hashicorp/consul-template/pull/1243)]
+* Migrated to use Go modules [[GH-1244](https://github.com/hernad/consul-template/pull/1244), [GH-1173](https://github.com/hernad/consul-template/issues/1173), [GH-1208](https://github.com/hernad/consul-template/pull/1208)[GH-1232](https://github.com/hernad/consul-template/pull/1232)]
+* Template blacklist feature [[GH-1243](https://github.com/hernad/consul-template/pull/1243)]
 
 ## v0.20.1 (July 30, 2019)
 
 BUG FIXES:
 
-* Fixed issue with exec running before template rendering when wait is set [[GH-1229](https://github.com/hashicorp/consul-template/issues/1229), [GH-1209](https://github.com/hashicorp/consul-template/issues/1209)]
-* Fixed issue with templates not rendering with `-once` [[GH-1227](https://github.com/hashicorp/consul-template/pull/1227), [GH-1196](https://github.com/hashicorp/consul-template/issues/1196), [GH-1207](https://github.com/hashicorp/consul-template/issues/1207)]
-* Fixed regression with ~/.vault-token and with vault_agent_token_file not respecting renew_token [[GH-1228](https://github.com/hashicorp/consul-template/issues/1228), [GH-1189](https://github.com/hashicorp/consul-template/issues/1189)]
-* CA certificates missing from docker 'light' image [[GH-1200](https://github.com/hashicorp/consul-template/issues/1200)]
-* Fixed issue with dedup data garbage in Consul KV [[GH-1158](https://github.com/hashicorp/consul-template/issues/1158), [GH-1168](https://github.com/hashicorp/consul-template/issues/1168)]
-* Fixed bad case in import path [[GH-1139](https://github.com/hashicorp/consul-template/issues/1139)]
-* Documented limits on using "." in service names [[GH-1205](https://github.com/hashicorp/consul-template/issues/1205)]
+* Fixed issue with exec running before template rendering when wait is set [[GH-1229](https://github.com/hernad/consul-template/issues/1229), [GH-1209](https://github.com/hernad/consul-template/issues/1209)]
+* Fixed issue with templates not rendering with `-once` [[GH-1227](https://github.com/hernad/consul-template/pull/1227), [GH-1196](https://github.com/hernad/consul-template/issues/1196), [GH-1207](https://github.com/hernad/consul-template/issues/1207)]
+* Fixed regression with ~/.vault-token and with vault_agent_token_file not respecting renew_token [[GH-1228](https://github.com/hernad/consul-template/issues/1228), [GH-1189](https://github.com/hernad/consul-template/issues/1189)]
+* CA certificates missing from docker 'light' image [[GH-1200](https://github.com/hernad/consul-template/issues/1200)]
+* Fixed issue with dedup data garbage in Consul KV [[GH-1158](https://github.com/hernad/consul-template/issues/1158), [GH-1168](https://github.com/hernad/consul-template/issues/1168)]
+* Fixed bad case in import path [[GH-1139](https://github.com/hernad/consul-template/issues/1139)]
+* Documented limits on using "." in service names [[GH-1205](https://github.com/hernad/consul-template/issues/1205)]
 
 ## v0.20.0 (February 19, 2019)
 

@@ -6,7 +6,7 @@ package template
 import (
 	"sync"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/hernad/consul-template/dependency"
 )
 
 // Brain is what Template uses to determine the values that are

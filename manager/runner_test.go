@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/child"
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
+	"github.com/hernad/consul-template/child"
+	"github.com/hernad/consul-template/config"
+	dep "github.com/hernad/consul-template/dependency"
+	"github.com/hernad/consul-template/template"
 )
 
 func TestRunner_initTemplates(t *testing.T) {
@@ -864,7 +864,7 @@ func TestRunner_Start(t *testing.T) {
 
 	// verifies that multiple differing templates that share
 	// a wait parameter call an exec function
-	// https://github.com/hashicorp/consul-template/issues/1043
+	// https://github.com/hernad/consul-template/issues/1043
 	t.Run("multi-template-exec", func(t *testing.T) {
 		testConsul.SetKVString(t, "multi-exec-wait-foo", "bar")
 		testConsul.SetKVString(t, "multi-exec-wait-bar", "bat")

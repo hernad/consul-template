@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/hernad/consul-template/dependency"
 	"github.com/hashicorp/vault/api"
 )
 

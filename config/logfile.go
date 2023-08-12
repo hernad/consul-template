@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hashicorp/consul-template/version"
+	"github.com/hernad/consul-template/version"
 )
 
 var (

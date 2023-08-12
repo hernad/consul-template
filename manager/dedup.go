@@ -15,10 +15,10 @@ import (
 
 	"github.com/mitchellh/hashstructure"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
-	"github.com/hashicorp/consul-template/version"
+	"github.com/hernad/consul-template/config"
+	dep "github.com/hernad/consul-template/dependency"
+	"github.com/hernad/consul-template/template"
+	"github.com/hernad/consul-template/version"
 	consulapi "github.com/hashicorp/consul/api"
 )
 
@@ -235,7 +235,7 @@ func (d *DedupManager) UpdateDeps(t *template.Template, deps []dep.Dependency) e
 	// Compute stable hash of the data. Note we don't compute this over the actual
 	// encoded value since gob encoding does not guarantee stable ordering for
 	// maps so spuriously returns a different hash most times. See
-	// https://github.com/hashicorp/consul-template/issues/1099.
+	// https://github.com/hernad/consul-template/issues/1099.
 	hash, err := hashstructure.Hash(td, nil)
 	if err != nil {
 		return fmt.Errorf("calculating hash failed: %v", err)

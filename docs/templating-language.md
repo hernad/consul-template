@@ -376,7 +376,7 @@ For example:
 
 Using [`safeLs`](#safels) on empty prefixes will result in template output not being rendered at all.
 
-To learn how [`safeLs`](#safels) was born see [CT-1131](https://github.com/hashicorp/consul-template/issues/1131) [C-3975](https://github.com/hashicorp/consul/issues/3975) and [CR-82](https://github.com/hashicorp/consul-replicate/issues/82).
+To learn how [`safeLs`](#safels) was born see [CT-1131](https://github.com/hernad/consul-template/issues/1131) [C-3975](https://github.com/hashicorp/consul/issues/3975) and [CR-82](https://github.com/hashicorp/consul-replicate/issues/82).
 
 ### `node`
 
@@ -805,7 +805,7 @@ For example:
 
 Using [`safeTree`](#safetree) on empty prefixes will result in template output not being rendered at all.
 
-To learn how [`safeTree`](#safetree) was born see [CT-1131](https://github.com/hashicorp/consul-template/issues/1131) [C-3975](https://github.com/hashicorp/consul/issues/3975) and [CR-82](https://github.com/hashicorp/consul-replicate/issues/82).
+To learn how [`safeTree`](#safetree) was born see [CT-1131](https://github.com/hernad/consul-template/issues/1131) [C-3975](https://github.com/hashicorp/consul/issues/3975) and [CR-82](https://github.com/hashicorp/consul-replicate/issues/82).
 
 ---
 

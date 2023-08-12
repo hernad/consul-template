@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
+	"github.com/hernad/consul-template/dependency"
+	"github.com/hernad/consul-template/template"
 )
 
 func TestDedup_StartStop(t *testing.T) {

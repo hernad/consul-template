@@ -10,8 +10,8 @@ import (
 	"os"
 	"testing"
 
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/test"
+	dep "github.com/hernad/consul-template/dependency"
+	"github.com/hernad/consul-template/test"
 	"github.com/hashicorp/consul/sdk/testutil"
 )
 

@@ -2,9 +2,9 @@
 ---
 # Consul Template
 
-[![build](https://github.com/hashicorp/consul-template/actions/workflows/build.yml/badge.svg)](https://github.com/hashicorp/consul-template/actions/workflows/build.yml)
-[![ci](https://github.com/hashicorp/consul-template/actions/workflows/ci.yml/badge.svg)](https://github.com/hashicorp/consul-template/actions/workflows/ci.yml)
-[![Go Documentation](http://img.shields.io/badge/go-documentation-%2300acd7)](https://godoc.org/github.com/hashicorp/consul-template)
+[![build](https://github.com/hernad/consul-template/actions/workflows/build.yml/badge.svg)](https://github.com/hernad/consul-template/actions/workflows/build.yml)
+[![ci](https://github.com/hernad/consul-template/actions/workflows/ci.yml/badge.svg)](https://github.com/hernad/consul-template/actions/workflows/ci.yml)
+[![Go Documentation](http://img.shields.io/badge/go-documentation-%2300acd7)](https://godoc.org/github.com/hernad/consul-template)
 
 This project provides a convenient way to populate values from [Consul][consul]
 into the file system using the `consul-template` daemon.
@@ -19,7 +19,7 @@ this functionality might prove useful.
 
 **The documentation in this README corresponds to the main branch of Consul Template. It may contain unreleased features or different APIs than the most recently released version.**
 
-**Please see the [Git tag](https://github.com/hashicorp/consul-template/releases) that corresponds to your version of Consul Template for the proper documentation.**
+**Please see the [Git tag](https://github.com/hernad/consul-template/releases) that corresponds to your version of Consul Template for the proper documentation.**
 
 ---
 
@@ -187,7 +187,7 @@ If you build your own image based on ours you can override these values with
 ### Dots in Service Names
 
 Using dots `.` in service names will conflict with the use of dots for [TAG
-delineation](https://github.com/hashicorp/consul-template#service) in the
+delineation](https://github.com/hernad/consul-template#service) in the
 template. Dots already [interfere with using
 DNS](https://www.consul.io/docs/agent/services.html#service-and-tag-names-with-dns)
 for service names, so we recommend avoiding dots wherever possible.
@@ -422,7 +422,7 @@ To build and install Consul-Template locally, you will need to [install Go][go].
 Clone the repository:
 
 ```shell
-$ git clone https://github.com/hashicorp/consul-template.git
+$ git clone https://github.com/hernad/consul-template.git
 ```
 
 To compile the `consul-template` binary for your local machine:
@@ -455,7 +455,7 @@ go test ./... -run SomeTestFunction_name
 
 [consul]: https://www.consul.io "Consul by HashiCorp"
 [connect]: https://www.consul.io/docs/connect/ "Connect"
-[examples]: (https://github.com/hashicorp/consul-template/tree/main/examples) "Consul Template Examples"
+[examples]: (https://github.com/hernad/consul-template/tree/main/examples) "Consul Template Examples"
 [releases]: https://releases.hashicorp.com/consul-template "Consul Template Releases"
 [vault]: https://www.vaultproject.io "Vault by HashiCorp"
 [go]: https://golang.org "Go programming language"
