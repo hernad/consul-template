@@ -15,7 +15,7 @@ import (
 
 	consulapi "github.com/hashicorp/consul/api"
 	rootcerts "github.com/hashicorp/go-rootcerts"
-	nomadapi "github.com/hashicorp/nomad/api"
+	nomadapi "github.com/hernad/nomad/api"
 	vaultapi "github.com/hashicorp/vault/api"
 	vaultkubernetesauth "github.com/hashicorp/vault/api/auth/kubernetes"
 )
