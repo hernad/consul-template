@@ -11,7 +11,7 @@ import (
 	"time"
 
 	consulapi "github.com/hashicorp/consul/api"
-	nomadapi "github.com/hashicorp/nomad/api"
+	nomadapi "github.com/hernad/nomad/api"
 )
 
 const (

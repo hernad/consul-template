@@ -15,7 +15,7 @@ require (
 	github.com/hashicorp/go-syslog v1.0.0
 	github.com/hashicorp/hcl v1.0.0
 	github.com/hashicorp/logutils v1.0.0
-	github.com/hashicorp/nomad/api v0.0.0-20230103221135-ce00d683f9be
+	github.com/hernad/nomad/api v0.0.0-20230103221135-ce00d683f9be
 	github.com/hashicorp/serf v0.10.1 // indirect
 	github.com/hashicorp/vault/api v1.8.2
 	github.com/imdario/mergo v0.3.13

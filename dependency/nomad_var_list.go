@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/hashicorp/nomad/api"
+	"github.com/hernad/nomad/api"
 	"github.com/pkg/errors"
 )
 

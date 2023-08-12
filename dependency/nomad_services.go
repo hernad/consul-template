@@ -11,7 +11,7 @@ import (
 	"regexp"
 	"sort"
 
-	nomadapi "github.com/hashicorp/nomad/api"
+	nomadapi "github.com/hernad/nomad/api"
 	"github.com/pkg/errors"
 )
 

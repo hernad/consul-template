@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	nomadapi "github.com/hashicorp/nomad/api"
+	nomadapi "github.com/hernad/nomad/api"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

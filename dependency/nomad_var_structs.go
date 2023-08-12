@@ -8,7 +8,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/hashicorp/nomad/api"
+	"github.com/hernad/nomad/api"
 )
 
 // NewNomadVarMeta is used to create a NomadVarMeta from a Nomad API
